@@ -8,6 +8,8 @@ unzip
 wipe
 
 arch-install-scripts
+archboot
+archiso
 b43-fwcutter
 btrfs-progs
 clonezilla
@@ -20,6 +22,7 @@ dmraid
 dnsmasq
 dnsutils
 dosfstools
+efitools
 elinks
 ethtool
 f2fs-tools
