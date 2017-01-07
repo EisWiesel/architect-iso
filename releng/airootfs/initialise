@@ -58,31 +58,13 @@ dialog --backtitle "$VERSION" --title " Connecting Wifi " --infobox "$_PlsWait" 
 
 }
 
-# Stable or Development Options available
+# Download only Custom aif-dev Version
 download_aif() {
 
-  # Provided there is a connection, then this menu will be available.
-  dialog --backtitle "$VERSION" --title " Installer Version " \
-  --menu $"\nPlease choose / Gelieve te kiezen / Bitte wählen / Scegli / Vennligst velg / Por favor elija\n\n1. Stable / stabiel / stabil / stabile / stabilny / estable\n\n2. Development / ontwikkeling / Entwicklung / sviluppo / utvikling / rozwój / desarrollo\n" 20 50 2 \
-  "1" $"Stable" \
-  "2" $"Development" 2>${OPT}
-  
-  case $(cat ${OPT}) in
-       "1") # Stable (Net)
-            clear
-            wget -N https://github.com/CarlDuff/aif/archive/master.zip
-            unzip -o master.zip -d /
-            /aif-master/aif
-            ;;
-       "2") # Development Version
-            clear
-            wget -N https://github.com/CarlDuff/aif-dev/archive/master.zip
-            unzip -o master.zip -d /
-            /aif-dev-master/aif
-            ;;
-         *) break;
-            ;;
-  esac
+  clear
+  wget -N https://github.com/EisWiesel/aif-dev/archive/master.zip
+  unzip -o master.zip -d /
+  /aif-dev-master/aif
 
 }
 
