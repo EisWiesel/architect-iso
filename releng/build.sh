@@ -2,7 +2,7 @@
 
 set -e -u
 
-iso_name=architect
+iso_name=blackarchitect
 iso_label="ATECT$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
